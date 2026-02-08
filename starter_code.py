@@ -89,9 +89,9 @@ def find_infected_files(directory_path, extension=".encrypted"):
     # Base case
     if os.path.isfile(directory_path):
         if directory_path.endswith(extension):
-            return [directory_path]   # return list containing the file
+            return [directory_path] # return list containing the file
         else:
-            return []                 # not infected
+            return [] # not infected
         
     infected = []
     for item in os.listdir(directory_path):
