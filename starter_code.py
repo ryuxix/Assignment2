@@ -101,7 +101,11 @@ def find_infected_files(directory_path, extension=".encrypted"):
     return infected
 
 # Department infection comparison
-hr_count = len(find_infected_files("breach_data/HR"))
+hr_count = (
+    len(find_infected_files("breach_data/HR"))+
+    len(find_infected_files("breach_data/HR_1")) +
+    len(find_infected_files("breach_data/HR_2"))
+)
 sales_count = len(find_infected_files("breach_data/Sales"))
 operations_count = len(find_infected_files("breach_data/Operations"))
 
